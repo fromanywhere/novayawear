@@ -1,33 +1,7 @@
 @import "../_utils.less";
 
-.small-logo() {
-    width: 3.8rem;
-    height: 3rem;
-    }
-
-.medium-logo() {
-    }
-
 .logo {
-    display: block;
-    text-indent: -99rem;
-
-    &.__small {
-        .small-logo();
-        }
-
-    &.__medium {
-        .medium-logo()
-        }
-
-    .top-line.__fixed & {
-        .small-logo();
-        }
-
-    .desktop-breakpoint({
-
-        .top-line.__fixed & {
-            .small-logo();
-            }
-        });
+    .column();
+    width: 1360px;
+    max-width: 100%;
     }

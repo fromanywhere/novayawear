@@ -1,20 +1,14 @@
 @import "../_utils.less";
 
 .catalog {
-    display: flex;
+    overflow: hidden;
+    }
 
-    div {
+    .catalog_item {
         .column();
-        height: 100px;
-        background: red;
+        float: left;
 
         .tablet-portrait-breakpoint({
             .column(2);
             });
-
-        .tablet-landscape-breakpoint({
-            .column(3);
-            });
         }
-
-    }

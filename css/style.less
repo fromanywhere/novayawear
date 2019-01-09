@@ -5,14 +5,28 @@
 //base components
 @import "base/heading.less";
 @import "base/logo.less";
+@import "base/base-input.less";
+@import "base/button.less";
 
 //base layout
 @import "base/layout.less";
 
 @import "project/wrapper.less";
-@import "project/catalog.less";
 @import "project/footer.less";
 @import "project/navigation.less";
+
+@import "project/catalog.less";
+@import "project/catalog-card.less";
+
+@import "project/collections.less";
+@import "project/collections-card.less";
+
+@import "project/collection.less";
+@import "project/collection-card.less";
+
+@import "project/login.less";
+
+@import "project/grid.less";
 
 header {
     text-align: center;
@@ -67,7 +81,7 @@ header {
         line-height: 0;
         }
 
-    img {
+    .stores_item img {
         display: block;
         width: 900px;
         height: 580px;

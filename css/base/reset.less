@@ -4,31 +4,29 @@ html {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 20px;
     font-family: SuisseIntl, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
-    
-    --column-width: 130px;
+    }
+
+:root {
+    --column-width: 50%;
+    --gap-half-width: 5px;
+    --gap-width: calc(var(--gap-half-width) * 2);
 
     .tablet-portrait-breakpoint({
-        --column-width: 125px;
+        --column-width: 25%;
+        --gap-half-width: 10px;
         });
 
     .tablet-landscape-breakpoint({
-        --column-width: 110px;
-        });
-
-    .laptop-breakpoint({
-        --column-width: 210px;
-        });
-
-    .desktop-breakpoint({
-        --column-width: 290px;
+        --column-width: 16.66%;
         });
     }
 
 body {
+    position: relative;
     padding: 0;
     margin: 0;
     min-height: 100%;

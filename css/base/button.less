@@ -1,0 +1,26 @@
+.button {
+    display: block;
+    border: none;
+    padding: 0 10px;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    background-color: #000;
+    font-size: 16px;
+    font-family: SuisseIntl, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+
+    button& {
+        display: flex;
+        justify-content: space-between;
+        line-height: normal;
+
+        &:after {
+            content: '↳';
+            }
+        }
+    }

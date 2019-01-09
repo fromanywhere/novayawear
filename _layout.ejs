@@ -20,17 +20,25 @@
 
 
     <body>
+        <!--
         <div class="wrapper">
             <div class="wrapper_content">
+                <%- partial("_partials/_header"); %>
+
                 <%- yield %>
-            </div>
+            </div>    -->
 
             <!--
             <div class="wrapper_footer">
                 <%- partial("_partials/_footer"); %>
             </div>
             -->
+        <!--
         </div>
+        <%- partial("_partials/_grid"); %>
+        -->
+
+        <%- yield %>
     </body>
 
 </html>

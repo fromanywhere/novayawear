@@ -1,0 +1,18 @@
+@import "../_utils.less";
+
+.collection {
+    overflow: hidden;
+    }
+
+.collection_item {
+    .column();
+    float: left;
+
+    .tablet-portrait-breakpoint({
+        .column(2);
+        });
+
+    .tablet-landscape-breakpoint({
+        .column(3);
+        });
+    }
