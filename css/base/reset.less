@@ -1,0 +1,74 @@
+@import "../_utils.less";
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 20px;
+    font-family: SuisseIntl, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+    --column-width: 130px;
+
+    .tablet-portrait-breakpoint({
+        --column-width: 125px;
+        });
+
+    .tablet-landscape-breakpoint({
+        --column-width: 110px;
+        });
+
+    .laptop-breakpoint({
+        --column-width: 210px;
+        });
+
+    .desktop-breakpoint({
+        --column-width: 290px;
+        });
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    }
+
+p, ul, ol {
+    padding: 0;
+    margin: 0;
+    }
+
+ul, ol {
+    list-style: none;
+    }
+
+hr {
+    margin: 0;
+    border: 0 none;
+    }
+
+a {
+    color: #fff;
+
+    &:hover {
+        text-decoration: none;
+        }
+    }
+
+th {
+    font-weight: 300;
+    text-align: left;
+    }
+
+article, aside, figcaption, figure, footer, header, section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    }

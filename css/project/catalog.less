@@ -1,0 +1,20 @@
+@import "../_utils.less";
+
+.catalog {
+    display: flex;
+
+    div {
+        .column();
+        height: 100px;
+        background: red;
+
+        .tablet-portrait-breakpoint({
+            .column(2);
+            });
+
+        .tablet-landscape-breakpoint({
+            .column(3);
+            });
+        }
+
+    }

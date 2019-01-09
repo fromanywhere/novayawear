@@ -1,0 +1,21 @@
+@import "../_utils.less";
+
+.wrapper {
+
+    }
+
+    .wrapper_content {
+        .column(2);
+
+        .tablet-portrait-breakpoint({
+            .column(4);
+            });
+
+        .tablet-landscape-breakpoint({
+            .column(6);
+            });                     
+
+        border-left: var(--gap) transparent solid;
+        border-right: var(--gap) transparent solid;
+        margin: 0 auto !important;
+        }

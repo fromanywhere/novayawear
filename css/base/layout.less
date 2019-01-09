@@ -1,0 +1,27 @@
+@import "../_utils.less";
+
+.default-container {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-left: @gap transparent solid;
+    border-right: @gap transparent solid;
+
+    .grid & {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -2rem;
+            right: -8rem;
+            bottom: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.8;
+            background-position: -7.8rem 0;
+            background-image: repeating-linear-gradient(90deg, transparent, transparent 7.9rem, red 0.1rem, transparent 8rem, transparent 9.9rem, red 10rem);
+            }
+        }
+    }

@@ -1,0 +1,90 @@
+@halfGap: 10px;
+@gap: @halfGap * 2;
+
+@animationTime: .3s;
+
+
+.wordWrap(@force: false) {
+    display: block;
+    max-width: 100%;
+
+    & when (@force) {
+        word-wrap: break-word;
+        hyphens: auto;
+        }
+    }
+
+.ellip(@lineCount: 1) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & when (@lineCount > 1) {
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: @lineCount;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        }
+}
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        }
+
+    &:after {
+        clear: both;
+        }
+    }
+
+@desktopBreakpoint: 1880px;
+@laptopBreakpoint: 1400px;
+@tabletLandscapeBreakpoint: 800px;
+@tabletPortraitBreakpoint: 600px;
+@phoneBreakpoint: 320px;
+
+.desktop-breakpoint(@rules) {
+    @media screen and (min-width: @desktopBreakpoint) {
+        @rules();
+        }
+    }
+
+.laptop-breakpoint(@rules) {
+    @media screen and (min-width: @laptopBreakpoint) {
+        @rules();
+        }
+    }
+
+.tablet-landscape-breakpoint(@rules) {
+    @media screen and (min-width: @tabletLandscapeBreakpoint) {
+        @rules();
+        }
+    }
+
+.tablet-portrait-breakpoint(@rules) {
+    @media screen and (min-width: @tabletPortraitBreakpoint) {
+        @rules();
+        }
+    }
+
+.column(@columnCount: 1) {
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-left: @halfGap;
+    margin-right: @halfGap;
+    width: ~'calc(@{columnCount} * var(--column-width) + (@{columnCount} - 1) * @{gap})';
+
+    &:first-child {
+        margin-left: 0;
+        }
+
+    &:last-child {
+        margin-right: 0;
+        }
+    }
+
+
+
