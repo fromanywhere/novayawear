@@ -10,6 +10,18 @@
     padding: 0 var(--gap-half-width);
     pointer-events: none;
 
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        background-position: 0 0;
+        background-image: repeating-linear-gradient(180deg, transparent, transparent 9px, blue 1px, transparent 10px);
+        }
+
     &:after {
         content: '';
         position: absolute;

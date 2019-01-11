@@ -1,3 +1,42 @@
-p {
+.large-text() {
+    position: relative;
+    top: 5px;
+    font-size: 28px;
+    line-height: 30px;
+    }
 
+.small-text() {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    }
+
+.text {
+
+    h1 {
+        .large-text();
+        text-transform: uppercase;
+        }
+
+    h2, h3, h4, h5, h6 {
+        .large-text();
+        text-transform: uppercase;
+        }
+
+    p {
+        .large-text();
+        }
+
+    ol li {
+
+        &:before {
+            .large-text();
+            content: '1. ';
+            }
+
+        & > *:first-child {
+            display: inline;
+            }
+        }
     }
