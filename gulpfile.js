@@ -46,7 +46,7 @@ gulp.task('css', [], function () {
 
 gulp.task('webpack', function() {
     return gulp
-        .src('js/Entry.js')
+        .src('js/entry.js')
         .pipe(webpack(Object.assign({
             output: {
                 filename: 'App.js'
@@ -59,7 +59,7 @@ gulp.task('webpack', function() {
 
 gulp.task('watch-webpack', function() {
     return gulp
-        .src('js/Entry.js')
+        .src('js/entry.js')
         .pipe(webpack(Object.assign({
             watch: true,
             output: {
@@ -95,7 +95,7 @@ gulp.task('copy', function() {
 });
 
 gulp.task('default', function () {
-    runSequence('clean', 'copy', 'css', function() {
+    runSequence('clean', 'webpack', 'copy', 'css', function() {
         harp.compile('./build', '../www', function () {
             console.log('Build complete!');
         });

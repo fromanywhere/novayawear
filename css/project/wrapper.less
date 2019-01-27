@@ -1,9 +1,17 @@
 @import "../_utils.less";
 
 .wrapper {
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     }
 
     .wrapper_content {
+        padding: 0 var(--gap-half-width);
+        flex-grow: 1;
+        }
+
+    .wrapper_footer {
+        overflow: hidden;
         padding: 0 var(--gap-half-width);
         }

@@ -1,0 +1,29 @@
+.brand-page {
+    text-align: center;
+    font-size: 0;
+    padding: 50px 0;
+    }
+
+    .brand-page_item {
+        .column(2);
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 30px;
+
+        .laptop-breakpoint({
+            & + & {
+                margin-left: var(--gap-width);
+                }
+            })
+        }
+
+        .brand-page_img {
+            display: block;
+            width: 100%;
+            }
+
+        .brand-page_title {
+            position: relative;
+            top: 4px;
+            font-size: 16px;
+            }

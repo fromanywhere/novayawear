@@ -13,7 +13,7 @@ define([
 
         handleEvent(e) {
             if (e.type === 'keydown' && e.key == ';' && (e.ctrlKey || e.metaKey)) {
-                document.documentElement.classList.toggle('grid');
+                document.documentElement.classList.toggle('show-grid');
             }
         }
 

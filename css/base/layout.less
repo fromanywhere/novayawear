@@ -7,32 +7,3 @@
     border-left: var(--gap-width) transparent solid;
     border-right: var(--gap-width) transparent solid;
     }
-
-.half-layout {
-    display: flex;
-    min-height: 100vh;
-    }
-
-    .half-layout_column {
-        width: 100%;
-        flex-grow: 0;
-        flex-shrink: 0;
-        min-width: 0;
-        display: none;
-
-        & + & {
-            display: block;
-            }
-
-        .tablet-landscape-breakpoint({
-            display: block;
-            width: 50%;
-            })
-        }
-
-    .half-layout_cover {
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        }

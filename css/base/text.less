@@ -1,22 +1,11 @@
-.large-text() {
-    position: relative;
-    top: 5px;
-    font-size: 28px;
-    line-height: 30px;
-    }
-
-.small-text() {
-    position: relative;
-    top: 4px;
-    font-size: 16px;
-    line-height: 20px;
-    }
+@import "../_utils.less";
 
 .text {
 
     h1 {
         .large-text();
         text-transform: uppercase;
+        margin-bottom: 30px;
         }
 
     h2, h3, h4, h5, h6 {
@@ -26,13 +15,19 @@
 
     p {
         .large-text();
+        margin-bottom: 30px;
+        }
+
+    ol {
+        counter-reset: list;
         }
 
     ol li {
 
         &:before {
             .large-text();
-            content: '1. ';
+            counter-increment: list;
+            content: counters(list, ".") ". ";
             }
 
         & > *:first-child {

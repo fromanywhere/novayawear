@@ -1,7 +1,31 @@
 @import "../_utils.less";
 
+@theMainK: 370.5 / 1360;
+@everyY20Xstep: 20 / @theMainK;
+
+@maxScreenWidth: 3000;
+@endX: ceil(@maxScreenWidth / @everyY20Xstep) * @everyY20Xstep;
+
+.loop(@counter: @endX) when (@counter > 0) {
+    .loop((@counter - @everyY20Xstep));
+
+    @unitedCounter: unit(ceil(@counter), px);
+    @outerGaps: if(@unitedCounter < @tabletPortraitBreakpoint, 40px, 20px);
+
+    @media screen and (min-width: (@unitedCounter - @outerGaps)) {
+        height: (floor(@counter * @theMainK) * 1px);
+        }
+    }
+
 .logo {
     .column();
+    .loop();
+    display: block;
     width: 1360px;
     max-width: 100%;
+
+    svg {
+        width: 100%;
+        }
     }
+

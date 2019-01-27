@@ -17,5 +17,55 @@
   "catalog": {
     "cover": null,
     "title": null
+  },
+
+  "collection": {
+    "layout": "_page-layout"
+  },
+  "collections": {
+    "layout": "_page-layout"
+  },
+
+
+  "delivery": {
+    "layout": "_page-layout"
+  },
+  "isosoft": {
+    "layout": "_page-layout"
+  },
+  "refund": {
+    "layout": "_page-layout"
+  },
+  "wholesale": {
+    "layout": "_page-layout"
+  },
+  "account": {
+    "layout": "_page-layout"
+  },
+  "payment": {
+    "layout": "_page-layout"
+  },
+  "brand": {
+    "layout": "_page-layout"
+  },
+
+  "contacts": {
+    "layout": "_page-layout"
+  },
+  "shops": {
+    "layout": "_page-layout"
+  },
+
+  "registration": {
+    "layout": "_auth-page-layout"
+  },
+  "login": {
+    "layout": "_auth-page-layout"
+  },
+  "recovery": {
+    "layout": "_auth-page-layout"
+  },
+  "404": {
+    "layout": "_auth-page-layout"
   }
 }

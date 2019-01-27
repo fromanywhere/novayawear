@@ -1,0 +1,6 @@
+<a class="overlay-card js-hook" <%= href ? ('href=' + href) : '' %> data-module="VerticalGridAligner">
+    <img class="overlay-card_img" src="<%- image %>" />
+    <%if (title) {%>
+        <div class="overlay-card_title"><%- title %></div>
+    <% } %>
+</a>

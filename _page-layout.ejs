@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" class="js-hook no-js" data-module="Grid">
+
+    <%- partial("_partials/_head"); %>
+
+    <body>
+            <div class="wrapper">
+                <div class="wrapper_content">
+                    <%- partial("_partials/_header"); %>
+                    <%- partial("_partials/_logo"); %>
+
+                    <%- yield %>
+                </div>
+
+                <div class="wrapper_footer">
+                    <%- partial("_partials/_footer"); %>
+                </div>
+
+            </div>
+            <%- partial("_partials/_grid"); %>
+    </body>
+
+</html>
