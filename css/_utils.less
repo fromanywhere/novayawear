@@ -51,6 +51,21 @@
     line-height: 20px;
     }
 
+.nav-link() {
+    cursor: pointer;
+    color: #000;
+
+    &:hover {
+        text-decoration: underline;
+        }
+
+    &.__active {
+        color: #a5a5a5;
+        text-decoration: none;
+        cursor: default;
+        }
+    }
+
 @desktopBreakpoint: 1880px;
 @laptopBreakpoint: 1400px;
 @tabletLandscapeBreakpoint: 800px;

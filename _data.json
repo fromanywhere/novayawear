@@ -67,5 +67,24 @@
   },
   "404": {
     "layout": "_auth-page-layout"
+  },
+
+  "change-password": {
+    "layout": "_layout"
+  },
+  "change-personal": {
+    "layout": "_layout"  
+  },
+  "personal": {
+    "layout": "_layout"
+  },
+  "order-detail": {
+    "layout": "_layout"
+  },
+  "order-check": {
+    "layout": "_layout"
+  },
+  "order-prepare": {
+    "layout": "_layout"
   }
 }

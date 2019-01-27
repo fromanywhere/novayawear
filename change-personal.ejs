@@ -1,0 +1,61 @@
+<div class="personal-page">
+    <div class="personal-page_menu">
+        <%- partial("_partials/_personal-menu"); %>
+    </div>
+    <div class="personal-page_main">
+        <form>
+            <div class="form_i">
+                <label class="label-block" for="name">Имя</label>
+                <input type="text" id="name" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="surname">Фамилия</label>
+                <input type="text" id="surname" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="email">Email</label>
+                <input type="email" id="email" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="phone">Телефон</label>
+                <input type="tel" id="phone" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="country">Страна</label>
+                <label class="base-select_w">
+                    <select id="country" class="base-select">
+                        <option>Россия</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="post">Почтовый индекс</label>
+                <input type="number" id="post" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="area">Область/регион</label>
+                <input type="text" id="area" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="city">Населенный пункт</label>
+                <input type="text" id="city" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <label class="label-block" for="address">Адрес: улица, дом, квартира, корпус</label>
+                <input type="text" id="address" class="base-input" />
+            </div>
+
+            <div class="form_i">
+                <button type="submit" class="button">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>

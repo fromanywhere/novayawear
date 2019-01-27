@@ -1,0 +1,45 @@
+@import "../_utils.less";
+
+.order-detail {
+
+    }
+
+    .order-detail_item {
+        position: relative;
+        top: 1px;
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 30px;
+        }
+
+    .order-detail_info {
+        overflow: hidden;
+        margin: 0;
+        margin-left: calc(var(--gap-width) * -1);
+        padding-top: 10px;
+        }
+
+        .order-detail_info-title {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            margin: 0;
+            padding-left: var(--gap-width);
+            white-space: nowrap;
+
+            .tablet-portrait-breakpoint({
+                width: 33.5%;
+                })
+            }
+
+        .order-detail_info-value {
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 0;
+            padding-left: var(--gap-width);
+            }
+
+    .order-detail-summary {
+        padding-top: 10px;
+        margin-bottom: 40px;
+        }

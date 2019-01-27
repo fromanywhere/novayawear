@@ -1,0 +1,14 @@
+<nav class="personal-menu">
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'personal' ? '__active' :'' %>" href="./personal">Учетная запись</a>
+    </div>
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'orders' ? '__active' :'' %>" href="./orders">История заказов</a>
+    </div>
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'change-password' ? '__active' :'' %>" href="./change-password">Сменить пароль</a>
+    </div>
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'logout' ? '__active' :'' %>" href="./logout">Выйти</a>
+    </div>
+</nav>

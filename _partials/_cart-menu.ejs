@@ -1,0 +1,11 @@
+<nav class="personal-menu">
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'cart' ? '__active' :'' %>" href="./cart">Корзина</a>
+    </div>
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'order-prepare' ? '__active' :'' %>" href="./order-prepare">Оформление заказa</a>
+    </div>
+    <div class="personal-menu_item">
+        <a class="personal-menu_link <%= current.source === 'order-check' ? '__active' :'' %>" href="./order-check">Проверка данных</a>
+    </div>
+</nav>
