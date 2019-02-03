@@ -1,0 +1,63 @@
+<form class="personal-page __has-footer">
+    <div class="personal-page_menu">
+        <%- partial("_partials/_cart-menu"); %>
+    </div>
+    <div class="personal-page_main __wide">
+        <div class="cart">
+            <div class="cart_item">
+                <div class="cart_item-card">
+                    <div class="cart_item-photo">
+                        <img class="cart_item-img js-hook" src="./img/brand/img2.jpg" data-module="VerticalGridAligner" />
+                    </div>
+                    <div class="cart_item-desc">
+                        <div class="cart_item-title">Парка BLUE DENIM</div>
+                        <div class="cart_item-count">XXL</div>
+                    </div>
+                </div>
+                <div class="cart_item-actions">
+                    <div class="cart_item-actions-count">
+                        <div class="cart_item-actions-button">&minus;</div>
+                        <div class="cart_item-actions-count-text">1</div>
+                        <div class="cart_item-actions-button">+</div>
+                    </div>
+                    <div class="cart_item-actions-remove">Удалить</div>
+                    <div class="cart_item-actions-price">15 000 Р.</div>
+                </div>
+            </div>
+
+            <div class="cart_item">
+                <div class="cart_item-card">
+                    <div class="cart_item-photo">
+                        <img class="cart_item-img js-hook" src="./img/brand/img2.jpg" data-module="VerticalGridAligner" />
+                    </div>
+                    <div class="cart_item-desc">
+                        <div class="cart_item-title">Парка BLUE DENIM</div>
+                        <div class="cart_item-count">XL</div>
+                    </div>
+                </div>
+                <div class="cart_item-actions">
+                    <div class="cart_item-actions-count">
+                        <div class="cart_item-actions-button">&minus;</div>
+                        <div class="cart_item-actions-count-text">1</div>
+                        <div class="cart_item-actions-button">+</div>
+                    </div>
+                    <div class="cart_item-actions-remove">Удалить</div>
+                    <div class="cart_item-actions-price">15 000 Р.</div>
+                </div>
+            </div>
+                        
+            <div class="cart_footer">
+                <div class="cart_code">
+                    <label class="label-block" for="code">Код купона</label>
+                    <div class="cart_code-wrapper">
+                        <input type="text" id="code" class="base-input cart_code-text" />
+                        <button class="cart_code-apply" value="apply-code">Применить</button>
+                    </div>
+                </div>
+                <div class="cart_submit">
+                    <button type="submit" class="button">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

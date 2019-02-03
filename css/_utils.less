@@ -66,20 +66,11 @@
         }
     }
 
-@desktopBreakpoint: 1880px;
-@laptopBreakpoint: 1400px;
-@tabletLandscapeBreakpoint: 800px;
 @tabletPortraitBreakpoint: 600px;
-@phoneBreakpoint: 320px;
+@tabletLandscapeBreakpoint: 800px;
 
-.desktop-breakpoint(@rules) {
-    @media screen and (min-width: @desktopBreakpoint) {
-        @rules();
-        }
-    }
-
-.laptop-breakpoint(@rules) {
-    @media screen and (min-width: @laptopBreakpoint) {
+.tablet-portrait-breakpoint(@rules) {
+    @media screen and (min-width: @tabletPortraitBreakpoint) {
         @rules();
         }
     }
@@ -90,20 +81,34 @@
         }
     }
 
-.tablet-portrait-breakpoint(@rules) {
-    @media screen and (min-width: @tabletPortraitBreakpoint) {
-        @rules();
-        }
-    }
-
-.column(@columnCount: 1) {
+.column(@columnCount: 1, @breakpoint: 0) {
     flex-shrink: 0;
     flex-grow: 0;
     box-sizing: border-box;
-    border-left: var(--gap-half-width) transparent solid;
-    border-right: var(--gap-half-width) transparent solid;
-    width: ~'calc(@{columnCount} * var(--column-width))';
+    border-left: 1rem transparent solid;
+    border-right: 1rem transparent solid;
+    width: @columnCount * 50%;
+
+    & when (@breakpoint = @tabletPortraitBreakpoint) {
+        width: @columnCount * 25%;
+        }
+
+    & when (@breakpoint = @tabletLandscapeBreakpoint) {
+        width: @columnCount * 16.66%;
+        }
     }
+
+.column-rule(@rule, @columnCount: 1, @breakpoint: 0) {
+    @{rule}: @columnCount * 50%;
+
+    & when (@breakpoint = @tabletPortraitBreakpoint) {
+        @{rule}: @columnCount * 25%;
+        }
+
+    & when (@breakpoint = @tabletLandscapeBreakpoint) {
+        @{rule}: @columnCount * 16.66%;
+        }
+    } 
 
 
 

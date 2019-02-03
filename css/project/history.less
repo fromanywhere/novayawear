@@ -1,0 +1,86 @@
+@import "../_utils.less";
+
+.history {
+
+    .tablet-portrait-breakpoint({
+        margin-top: -10px;
+        });
+
+    .tablet-landscape-breakpoint({
+        margin-top: 0;
+        })
+    }
+
+    .history_head {
+        display: none;
+        border-bottom: 1px #000 solid;
+        padding-bottom: 5px;
+
+        .tablet-landscape-breakpoint({
+            display: flex;
+            });
+        }
+
+        .history_head-item {
+            width: calc((100% - (2rem * 4)) / 5);
+            margin-right: 2rem;
+            }
+
+    .history_body {
+
+        }
+
+        .history_line {
+            border-bottom: 1px #000 solid;
+            padding: 10px 0 9px;
+            overflow: hidden;
+
+            .tablet-portrait-breakpoint({
+                display: flex;
+                overflow: visible;
+                })
+            }
+
+            .history_group {
+                float: left;
+                margin-right: 50%;
+
+                .tablet-portrait-breakpoint({
+                    float: none;
+                    flex-shrink: 0;
+                    margin-right: 2rem;
+                    width: calc((100% - (2rem * 2)) / 3);
+                    });
+
+                .tablet-landscape-breakpoint({
+                    display: flex;
+                    width: calc((100% - (2rem * 4)) / 5 * 2 + 2rem);
+                    })
+                }
+
+            .history_line-item {
+
+                &.__last {
+                    text-align: right;
+                    }
+
+                .tablet-portrait-breakpoint({
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 1;
+
+                    &.__last {
+                        margin-right: 0;
+                        justify-content: flex-end;
+                        }
+                    });
+
+                .tablet-landscape-breakpoint({
+                    min-height: 20px;
+                    width: calc((100% - 2rem) / 2);
+
+                    & + & {
+                        margin-left: 2rem;
+                        }
+                    })
+                }

@@ -85,6 +85,9 @@
     "layout": "_layout"
   },
   "order-prepare": {
-    "layout": "_layout"
+    "layout": "_back-page-layout"
+  },
+  "cart": {
+    "layout": "_back-page-layout"
   }
 }

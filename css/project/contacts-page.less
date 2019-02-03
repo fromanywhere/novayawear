@@ -23,7 +23,7 @@
 
             .contacts-page_short-wrapper {
                 margin-bottom: 20px;
-                margin-left: calc(var(--gap-width) * -1);
+                margin-left: -2rem;
                 }
 
             .contacts-page_short {
@@ -31,7 +31,7 @@
                 float: left;
                 min-width: 50%;
                 box-sizing: border-box;
-                border-left: var(--gap-width) transparent solid;
+                border-left: 2rem transparent solid;
                 }
 
         .contacts-page_media {
@@ -39,7 +39,7 @@
             overflow: hidden;
 
             .tablet-landscape-breakpoint({
-                .column(4);
+                .column(4, @tabletLandscapeBreakpoint);
                 })
             }
 

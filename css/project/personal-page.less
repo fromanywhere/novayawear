@@ -2,11 +2,13 @@
 
 .personal-page {
      padding-top: 20px;
-     display: flex;
-     flex-direction: column;
+
+     &.__has-footer {
+        padding-bottom: 80px;
+        }
 
     .tablet-portrait-breakpoint({
-        flex-direction: row;
+        .clearfix();
         padding-top: 80px;
         });
     }
@@ -16,8 +18,13 @@
         .small-text();
 
         .tablet-portrait-breakpoint({
-            .column(1);
+            .column(1, @tabletPortraitBreakpoint);
+            float: left;
             });
+
+        .tablet-landscape-breakpoint({
+            .column(1, @tabletLandscapeBreakpoint);
+            })
         }
 
     .personal-page_main {
@@ -25,21 +32,45 @@
         .small-text();
 
         .tablet-portrait-breakpoint({
-            .column(3);
+            .column(3, @tabletPortraitBreakpoint);
+            .column-rule(margin-left, 1, @tabletPortraitBreakpoint);
             });
+
+        .tablet-landscape-breakpoint({
+            .column(3, @tabletLandscapeBreakpoint);
+            float: left;
+            margin-left: 0;
+            });
+
+        &.__wide {
+            .tablet-landscape-breakpoint({
+                .column(5, @tabletLandscapeBreakpoint);
+                });
+            }
         }
 
     .personal-page_aside {
         .column(2);
+        padding-top: 45px;
 
         .tablet-portrait-breakpoint({
-            .column(3);
+            .column(3, @tabletPortraitBreakpoint);
+            .column-rule(margin-left, 1, @tabletPortraitBreakpoint);
             });
 
         .tablet-landscape-breakpoint({
-            .column(2);
+            .column(2, @tabletLandscapeBreakpoint);
+            position: sticky;
+            top: 60px;
+            padding-top: 0;
+            margin-left: 0;
+            float: left;
             });
         }
+
+        .personal-page_aside-wrapper {
+            .small-text();
+            }
 
     .personal-page_title {
         position: relative;

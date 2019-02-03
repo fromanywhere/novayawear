@@ -3,30 +3,22 @@
 html {
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    /* Закодируем half-gap в пикселах. 1rem = 5px. Тогда gap = 2rem = 10px  */
+    font-size: 5px;
     line-height: 20px;
     font-family: SuisseIntl, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
-    }
 
-:root {
-    --column-width: 50%;
-    --gap-half-width: 5px;
-    --gap-width: calc(var(--gap-half-width) * 2);
-
+    /* Переопределение gap */
     .tablet-portrait-breakpoint({
-        --column-width: 25%;
-        --gap-half-width: 10px;
-        });
-
-    .tablet-landscape-breakpoint({
-        --column-width: 16.66%;
-        });
+        font-size: 10px;
+        })
     }
 
 body {
     padding: 0;
     margin: 0;
+    font-size: 16px;
     }
 
 h1, h2, h3, h4, h5, h6 {

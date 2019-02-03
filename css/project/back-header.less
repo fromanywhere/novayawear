@@ -1,0 +1,25 @@
+@import "../_utils.less";
+
+.back-header {
+    height: 50px;
+    }
+
+    .back-header_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 14px 2rem;
+        box-sizing: border-box;
+        background-color: #fff;
+        z-index: 20;
+        }
+
+    .back-header_link {
+        .nav-link();
+
+        &:before {
+            content: '↲';
+            margin-right: 5px;
+            }
+        }

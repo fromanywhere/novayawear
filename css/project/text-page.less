@@ -5,6 +5,10 @@
     padding-top: 30px;
 
     .tablet-portrait-breakpoint({
-        .column(4);
+        .column(4, @tabletPortraitBreakpoint);
         });
+
+    .tablet-landscape-breakpoint({
+        .column(4, @tabletLandscapeBreakpoint);
+        })
     }

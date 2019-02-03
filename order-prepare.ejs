@@ -1,4 +1,4 @@
-<form class="personal-page">
+<form class="personal-page __has-footer">
     <div class="personal-page_menu">
         <%- partial("_partials/_cart-menu"); %>
     </div>
@@ -58,8 +58,55 @@
         </div>
     </div>
     <div class="personal-page_aside">
-        <div class="form_i">
-            <button type="submit" class="button">Подтвердить заказ</button>
+        <div class="personal-page_aside-wrapper">
+            <div class="order-prepare-goods">
+                <div class="order-prepare-goods_title">Товар</div>
+                <div class="order-prepare-goods_item">АРЧИ grey Серый  M x 1<span class="order-prepare-aside">12 000 Р.</span></div>
+                <div class="order-prepare-goods_item">Парка BLUE DENIM  S x 1<span class="order-prepare-aside">12 000 Р.</span></div>
+            </div>
+
+            <div class="order-prepare-delivery">
+                <div class="order-prepare-delivery_title">Доставка</div>
+                <div class="form_i">
+                    <input type="radio" name="delivery" id="delivery1" checked />
+                    <label class="label-inline" for="delivery1">Самовывоз (Санкт-Петербург)</label>
+                </div>
+
+                <div class="form_i">
+                    <input type="radio" name="delivery" id="delivery2" />
+                    <label class="label-inline" for="delivery2">Самовывоз (Москва)</label>
+                </div>
+
+                <div class="form_i">
+                    <input type="radio" name="delivery" id="delivery3" />
+                    <label class="label-inline" for="delivery3">Балтийский курьер (Москва)<span class="order-prepare-aside">12 000 Р.</span></label>
+                </div>
+
+                <div class="form_i">
+                    <input type="radio" name="delivery" id="delivery4" />
+                    <label class="label-inline" for="delivery4">EMS<span class="order-prepare-aside">Рассчитывается оператором</span></label>
+                </div>
+            </div>
+
+            <div class="order-prepare-summary">Итого<span class="order-prepare-aside">12 000 Р.</span></div>
+
+            <div class="order-prepare-payment">
+                <div class="order-prepare-payment_title">Оплата</div>
+
+                <div class="form_i">
+                    <input type="radio" name="payment" id="payment1" checked />
+                    <label class="label-inline" for="payment1">При доставке (наличные или карта)</label>
+                </div>
+
+                <div class="form_i">
+                    <input type="radio" name="payment" id="payment2" />
+                    <label class="label-inline" for="payment2">PayAnyWay</label>
+                </div>
+            </div>
+
+            <div class="form_i">
+                <button type="submit" class="button">Подтвердить заказ</button>
+            </div>
         </div>
     </div>
 </form>

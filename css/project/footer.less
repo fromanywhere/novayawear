@@ -19,8 +19,12 @@ footer {
     margin-top: 20px;
 
     .tablet-portrait-breakpoint({
-        .column(4);
+        .column(4, @tabletPortraitBreakpoint);
         });
+
+    .tablet-landscape-breakpoint({
+        .column(4, @tabletLandscapeBreakpoint);
+        })
     }
 
 .footer_right {
@@ -31,11 +35,11 @@ footer {
     margin-top: 20px;
 
     .tablet-portrait-breakpoint({
-        .column(4);
+        .column(4, @tabletPortraitBreakpoint);
         });
 
     .tablet-landscape-breakpoint({
-        .column(2);
+        .column(2, @tabletLandscapeBreakpoint);
         });
     }
 

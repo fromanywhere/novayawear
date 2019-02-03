@@ -5,10 +5,14 @@
     }
 
     .catalog_item {
-        .column();
+        .column(1);
         float: left;
 
         .tablet-portrait-breakpoint({
-            .column(2);
+            .column(2, @tabletPortraitBreakpoint);
+            });
+
+        .tablet-landscape-breakpoint({
+            .column(2, @tabletLandscapeBreakpoint);
             });
         }
