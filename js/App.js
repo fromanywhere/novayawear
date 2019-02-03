@@ -179,6 +179,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 i = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName("body")[0].clientHeight,
                 a = Math.round(r - e < i ? r - i : e);
             "requestAnimationFrame" in window != 0 ? function e() {
+              if (window.pageYOffset <= a) return;
               var r = new Date().getTime(),
                   i = Math.min(1, (r - o) / t),
                   s = (c = i) < .5 ? 4 * c * c * c : (c - 1) * (2 * c - 2) * (2 * c - 2) + 1;

@@ -35,6 +35,10 @@ define([
             }
 
             function scroll() {
+                if (window.pageYOffset <= destinationOffsetToScroll) {
+                    return;
+                }
+
                 const now = new Date().getTime();
                 const time = Math.min(1, ((now - startTime) / DURATION));
                 const timeFunction = easeInOutCubic(time);
