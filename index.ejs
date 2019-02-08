@@ -1,23 +1,50 @@
-<div class="text-page">
-    <div class="text">
-        <p>Включение сетки: <code> + ;</code></p>
+<article class="main">
+    <a href="./collection" class="main_lookbook js-hook" data-module="ImageAlign">
+        <img class="main_lookbook-img" src="./img/index/lookbook.jpg" />
+        <div class="main_lookbook-title">Lookbook SS 19</div>
+    </a>
 
-        <ol>
-            <li><p><a href="./registration">Регистрация</a></p></li>
-            <li><p><a href="./login">Авторизация</a></p></li>
-            <li><p><a href="./recovery">Восстановление пароля</a></p></li>
-            <li><p><a href="./404">404</a></p></li>
-            <li><p><a href="./collections">Коллекции</a></p></li>
-            <li><p><a href="./collection">Коллекция</a></p></li>
-            <li><p><a href="./contacts">Контакты</a></p></li>
-            <li><p><a href="./shops">Магазины</a></p></li>
-            <li><p><a href="./delivery">Доставка</a></p></li>
-            <li><p><a href="./isosoft">Изософт</a></p></li>
-            <li><p><a href="./refund">Возврат</a></p></li>
-            <li><p><a href="./account">Реквизиты</a></p></li>
-            <li><p><a href="./payment">Оплата</a></p></li>
-            <li><p><a href="./wholesale">Оптовикам</a></p></li>
-            <li><p><a href="./brand">Бренд</a></p></li>
-        </ol>
+    <%- partial("_partials/_logo"); %>
+
+    <div class="main_gender-choice">
+        <div class="main_gender-choice-card">
+            <a class="main_gender-choice-link js-hook" href="./catalog" data-module="ImageAlign">
+                <img class="main_gender-choice-img" src="./img/index/men.jpg" />
+                <div class="main_gender-choice-title">Мужское</div>
+            </a>
+        </div>
+        <div class="main_gender-choice-card">
+            <a class="main_gender-choice-link js-hook" href="./catalog" data-module="ImageAlign">
+                <img class="main_gender-choice-img" src="./img/index/men.jpg" />
+                <div class="main_gender-choice-title">Женское</div>
+            </a>
+        </div>
     </div>
-</div>
+
+    <div class="main_description">
+        <div class="main_description-media">
+            <video controls="controls"
+                src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"></video>
+        </div>
+        <div class="main_description-text text">
+            <h1>BRAND BIOGRAPHY</h1>
+            <p>Бренд Novaya появился в 2011 году в Сaнкт-Петербурге, в городе, где зимa соствляет 9 месяцев в году — именно поэтому зa основу былa взята концепция рaзрaботки верхней одежды.</p>
+            <p>Учитывая дождливую и ветреную погоду Северной столицы, мы создаем одновременно легкие, теплые вещи, используя водоотталкивающие ткани, а также высокотехнологичный практичный в уходе бельгийский утеплитель ISOSOFT, который сохраняет ощущение комфорта и в +5, и в -25, не теряет форму, легко стирается и быстро сохнет.</p>
+        </div>
+    </div>
+
+    <div class="main_catalog">
+        <div class="catalog">
+            <% for(var i = 0; i < public._data['catalog'].items.length; i++) { %>
+            <div class="catalog_item">
+                <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
+            </div>
+            <% } %>
+        </div>
+        <a class="main_catalog-link main_link" href="./catalog">ПЕРЕЙТИ В МАГАЗИН</a>
+    </div>
+    
+    <div class="main_instagram">
+        <a class="main_instagram-link main_link" href="./catalog">ПОДПИШИТЕСЬ НА НАШ ИНСТАГРАМ</a>
+    </div>
+</article>

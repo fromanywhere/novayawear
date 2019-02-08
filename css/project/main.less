@@ -1,0 +1,117 @@
+@import "../_utils.less";
+
+.main {
+
+    }
+
+    .main_lookbook {
+        display: block;
+        position: relative;
+        border-bottom: 40px transparent solid;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        }
+
+        .main_lookbook-img {
+            display: block;
+            width: 100%;
+            }
+
+        .main_lookbook-title {
+            .large-text();
+            position: absolute;
+            top: auto;
+            left: 2rem;
+            bottom: 16px;
+            color: #000;
+            }
+
+    .main_gender-choice {
+        padding-top: 40px;
+        display: flex;
+        }
+
+        .main_gender-choice-card {
+            .column(1);
+            position: relative;
+
+            .tablet-portrait-breakpoint({
+                .column(2, @tabletPortraitBreakpoint);
+                });
+
+            .tablet-landscape-breakpoint({
+                .column(3, @tabletLandscapeBreakpoint);
+                });
+            }
+
+        .main_gender-choice-link {
+            display: block;
+            }
+
+            .main_gender-choice-img {
+                display: block;
+                width: 100%;
+                }
+
+            .main_gender-choice-title {
+                .large-text();
+                position: absolute;
+                color: #000;
+                padding-top: 10px;
+                left: 10px;
+
+                &:after {
+                    content: '↳';
+                    margin-left: 5px;
+                    text-decoration: none;
+                    }
+                }
+
+
+    .main_description {
+        padding-top: 80px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        }
+
+        .main_description-media {
+            margin-bottom: 60px;
+
+            & video {
+                width: 100%;
+                }
+            }
+
+            .main_description-text {
+
+                }
+
+    .main_catalog {
+        padding-top: 80px;
+        }
+
+        .main_catalog-link {
+            .large-text();
+            margin-left: 1rem;
+            }
+
+    .main_instagram {
+        padding-top: 80px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        }
+
+        .main_instagram-link {
+            .large-text();
+            }
+
+    .main_link {
+        color: #000;
+        text-transform: uppercase;
+
+        &:after {
+            content: '↳';
+            margin-left: 5px;
+            text-decoration: none;
+            }
+        }

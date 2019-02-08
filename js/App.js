@@ -101,9 +101,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var o = {
     "./AbstractModule.js": 0,
     "./Grid.js": 3,
+    "./ImageAlign.js": 6,
     "./ScrollTo.js": 4,
-    "./TopMenu.js": 5,
-    "./VerticalGridAligner.js": 6
+    "./TopMenu.js": 5
   };
 
   function r(e) {

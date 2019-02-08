@@ -10,7 +10,7 @@ define([
      * @class
      * @extends AbstractModule
      */
-    class VerticalGridAligner extends AbstractModule {
+    class ImageAlign extends AbstractModule {
         align(element, image) {
             const height = image.clientHeight;
             const correctedHeight = Math.ceil(height / LINE_HEIGHT) * LINE_HEIGHT;
@@ -38,5 +38,5 @@ define([
         }
     }
 
-    return VerticalGridAligner;
+    return ImageAlign;
 });
