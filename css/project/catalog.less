@@ -1,12 +1,14 @@
 @import "../_utils.less";
 
 .catalog {
-    overflow: hidden;
+    .clearfix();
+    padding-top: 40px;
     }
 
     .catalog_item {
         .column(1);
         float: left;
+        margin-bottom: 40px;
 
         .tablet-portrait-breakpoint({
             .column(2, @tabletPortraitBreakpoint);

@@ -16,7 +16,48 @@
   },
   "catalog": {
     "cover": null,
-    "title": null
+    "title": null,
+    "layout": "_page-layout",
+    "items": [
+      {
+        "href": "./item",
+        "image": "./img/collection/img1.jpg",
+        "title": "Костюм blue denim",
+        "price": "15 000 р. "
+      },
+      {
+        "href": "./item",
+        "image": "./img/collection/img2.jpg",
+        "title": "Костюм Blue",
+        "oldprice": "15 000 р",
+        "price": "8 400 р."
+      },
+      {
+        "href": "./item",
+        "image": "./img/collection/img3.jpg",
+        "title": "СКАЙ light blue",
+        "price": "11 800 р."
+      },
+      {
+        "href": "./item",
+        "image": "./img/collection/img4.jpg",
+        "title": "Костюм blue denim",
+        "price": "15 000 р. "
+      },
+      {
+        "href": "./item",
+        "image": "./img/collection/img5.jpg",
+        "title": "Костюм blue denim",
+        "price": "15 000 р. "
+      },
+      {
+        "href": "./item",
+        "image": "./img/collection/img6.jpg",
+        "title": "Костюм blue denim",
+        "price": "15 000 р. ",
+        "sizes": "L XL"
+      }
+    ]
   },
 
   "collection": {
@@ -25,7 +66,9 @@
   "collections": {
     "layout": "_page-layout"
   },
-
+  "item": {
+    "layout": "_page-layout"
+  },
 
   "delivery": {
     "layout": "_page-layout"

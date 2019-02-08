@@ -1,4 +1,17 @@
-<div class="catalog-card">
-    <div class="catalog-card_img"></div>
-    <div class="catalog-card_text"></div>
-</div>
+<a href="<%- href %>" class="catalog-card">
+    <div class="catalog-card_media js-hook" data-module="VerticalGridAligner">
+        <img class="catalog-card_img" src="<%- image %>" />
+    </div>
+    <div class="catalog-card_text">
+        <div class="catalog-card_title"><%- title %></div>
+        <div class="catalog-card_price">
+            <%if (oldprice) {%>
+                <span class="catalog-card_old-price"><%- oldprice %></span>
+            <% } %>
+            <span class="catalog-card_original-price"><%- price %></span>
+            <%if (sizes) {%>
+                <span class="catalog-card_sizes"><%- sizes %></span>
+            <% } %>
+        </div>
+    </div>
+</a>

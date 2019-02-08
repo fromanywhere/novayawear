@@ -1,0 +1,73 @@
+<article class="item">
+    <div class="item_header">
+        <div class="item_info">
+            <div class="item_info-title">КОМБИНЕЗОН С ДЛИННЫМ РУКАВОМ CRANBERRY</div>
+            <div class="item_info-text">Брючный костюм из эластичного денима. Блейзер имеет расширенную линией плеч и повторяет крой мужского пиджака. Застегивается на пуговицы, обработан на частичной подкладке. Прямые брюки имеют шлевки для пояса, два боковых кармана и один задний.</div>
+            <div class="item_info-links">
+                <a class="item_info-link" href="./brand">Дополнительная информация</a>
+                <a class="item_info-link" href="./isosoft">Таблица размеров</a>
+                <a class="item_info-link" href="./delivery">Доставка и оплата</a>
+            </div>
+        </div>
+        <div class="item_options">
+            <form>
+                <div class="item_price">
+                    <span class="item_old-price">15 000 Руб</span>
+                    <span class="item_original-price">10 900 Руб</span>
+                </div>
+                <div class="item_sizes">
+                    <label class="item_size-option">
+                        <input class="item_size-option-radio" type="radio" name="size" value="xs" disabled="disabled" />
+                        <span class="item_size-option-text">xs</span>
+                    </label>
+
+                    <label class="item_size-option">
+                        <input class="item_size-option-radio" type="radio" name="size" value="s" checked="checked"/>
+                        <span class="item_size-option-text">s</span>
+                    </label>
+
+                    <label class="item_size-option">
+                        <input class="item_size-option-radio" type="radio" name="size" value="m" />
+                        <span class="item_size-option-text">m</span>
+                    </label>
+
+                    <label class="item_size-option">
+                        <input class="item_size-option-radio" type="radio" name="size" value="l" />
+                        <span class="item_size-option-text">l</span>
+                    </label>
+
+                    <label class="item_size-option">
+                        <input class="item_size-option-radio" type="radio" name="size" value="xl" />
+                        <span class="item_size-option-text">xl</span>
+                    </label>
+                </div>
+                <div class="item_buy">
+                    <button type="submit" class="item_buy-submit">Добавить в корзину</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="item_views">
+        <div class="item_media" >
+            <img class="item_img js-hook" src="./img/collection/img1.jpg" data-module="VerticalGridAligner"  />
+        </div>
+        <div class="item_media">
+            <img class="item_img js-hook" src="./img/collection/img2.jpg" data-module="VerticalGridAligner" />
+        </div>
+        <div class="item_media">
+            <img class="item_img js-hook" src="./img/collection/img3.jpg" data-module="VerticalGridAligner" />
+        </div>
+    </div>
+
+    <div class="item_similar">
+        <div class="item_similar-title">WE HAVE MORE ITEMS</div>
+
+        <% for(var i = 0; i < 3; i++) { %>
+            <div class="item_similar-item">
+                <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
+            </div>
+        <% } %>
+    </div>
+
+</article>

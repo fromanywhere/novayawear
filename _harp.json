@@ -5,6 +5,8 @@
     "type": "",
     "href": "",
     "title": "",
-    "required": false
+    "required": false,
+    "oldprice": "",
+    "sizes": ""
   }
 }

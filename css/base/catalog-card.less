@@ -1,8 +1,48 @@
+@import "../_utils.less";
+
 .catalog-card {
-    margin-bottom: 10px;
+
     }
 
-    .catalog-card_img {
-        height: 100px;
-        background: #a5a5a5;
+    .catalog-card_media {
+
         }
+
+        .catalog-card_img {
+            display: block;
+            width: 100%;
+            }
+
+    .catalog-card_text {
+        .small-text();
+        color: #000;
+        }
+
+        .catalog-card_title {
+
+            }
+
+        .catalog-card_price {
+
+            }
+
+            .catalog-card_old-price {
+                color: #a5a5a5;
+                text-decoration: line-through;
+                white-space: nowrap;
+
+                &:after {
+                    content: '↳';
+                    margin-left: 5px;
+                    text-decoration: none;
+                    }
+                }
+
+            .catalog-card_original-price {
+                white-space: nowrap;
+                }
+
+            .catalog-card_sizes {
+                color: #a5a5a5;
+                text-transform: uppercase;
+                }
