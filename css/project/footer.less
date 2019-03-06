@@ -32,10 +32,12 @@ footer {
     float: left;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-top: 20px;
 
     .tablet-portrait-breakpoint({
         .column(4, @tabletPortraitBreakpoint);
+        align-items: initial;
         });
 
     .tablet-landscape-breakpoint({
@@ -49,10 +51,16 @@ footer {
 
 .footer_link {
     .nav-link();
-    float: left;
-    margin-right: 17px;
+    display: block;
+    margin-top: 5px;
 
-    .footer_top & {
-        margin-right: 0;
-        }
+    .tablet-portrait-breakpoint({
+        float: left;
+        margin-right: 17px;
+        margin-top: 0;
+
+        .footer_top & {
+            margin-right: 0;
+            }
+        });
     }

@@ -54,10 +54,10 @@
                 }
 
             .main_gender-choice-title {
-                .large-text();
-                position: absolute;
+                .small-text();
+                position: absolute !important;
                 color: #000;
-                padding-top: 10px;
+                padding-top: 10px !important;;
                 left: 10px;
 
                 &:after {
@@ -65,6 +65,10 @@
                     margin-left: 5px;
                     text-decoration: none;
                     }
+
+                .tablet-portrait-breakpoint({
+                    .large-text();
+                    })
                 }
 
 

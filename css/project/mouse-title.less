@@ -1,0 +1,34 @@
+.mouse-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #000;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    border: 20px transparent solid;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    background: #fff;
+    padding: 10px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 2000;
+
+    &.__top {
+        transform: translateY(-100%);
+        }
+
+    &.__left {
+        transform: translateX(-100%);
+        }
+
+    &.__top.__left {
+        transform: translate(-100%, -100%);
+        }
+
+    &.__hide,
+    &:empty {
+        opacity: 0;
+        }
+    }

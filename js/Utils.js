@@ -3,11 +3,15 @@ define(function () {
 
     class Utils {
 
-        throttle(callback, limit) {
+        isTouch() {
+            return ('ontouchstart' in window);
+        }
+
+        throttle(callback, limit, ctx = null) {
             let wait = false;
             return function () {
                 if (!wait) {
-                    callback.apply(null, arguments);
+                    callback.apply(ctx, arguments);
                     wait = true;
                     setTimeout(function () {
                         wait = false;

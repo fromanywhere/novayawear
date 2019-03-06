@@ -15,6 +15,14 @@
         .contacts-page_main {
             .column(2);
             .small-text();
+
+            .tablet-portrait-breakpoint({
+                .column(2, @tabletPortraitBreakpoint);
+                });
+
+            .tablet-landscape-breakpoint({
+                .column(2, @tabletLandscapeBreakpoint);
+                })
             }
 
             .contacts-page_wide {
@@ -37,6 +45,10 @@
         .contacts-page_media {
             .column(2);
             overflow: hidden;
+
+            .tablet-portrait-breakpoint({
+                .column(2, @tabletPortraitBreakpoint);
+                });
 
             .tablet-landscape-breakpoint({
                 .column(4, @tabletLandscapeBreakpoint);

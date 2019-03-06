@@ -1,11 +1,16 @@
 <div class="top-menu">
-    <nav class="top-menu_cnt">
+    <nav class="top-menu_cnt js-hook" data-module="TopMenu">
+        <div class="top-menu_overlay"></div>
+        <div class="nav_open-button"></div>
+
         <div class="nav_w">
-            <div class="nav_menu js-hook" data-module="TopMenu">
+            <div class="nav_menu">
+                <div class="nav_back"></div>
+
                 <div class="nav_i">
                     <div class="nav_title nav_link">New</div>
                 </div>
-                <div class="nav_i js-nav-dropdown">
+                <div class="nav_i __with-dropdown js-nav-dropdown">
                     <div class="nav_title nav_link">Women</div>
 
                     <div class="nav_dropdown">
@@ -19,7 +24,7 @@
                         <div class="nav_dropdown_i nav_link">Аксессуары</div>
                     </div>
                 </div>
-                <div class="nav_i js-nav-dropdown">
+                <div class="nav_i __with-dropdown js-nav-dropdown">
                     <div class="nav_title nav_link">Men</div>
 
                     <div class="nav_dropdown">
@@ -35,7 +40,7 @@
                 <div class="nav_i">
                     <a href="./sale" class="nav_title nav_link <%= current.source === 'sale' ? '__active' :'' %>">Sale</a>
                 </div>
-                <div class="nav_i js-nav-dropdown">
+                <div class="nav_i __with-dropdown js-nav-dropdown">
                     <a href="./delivery" class="nav_title nav_link <%= current.source === 'delivery' ? '__active' :'' %>">Информация</a>
                     <div class="nav_dropdown">
                         <a href="./delivery" class="nav_dropdown_i nav_link <%= current.source === 'delivery' ? '__active' :'' %>">Доставка</a>
@@ -49,7 +54,7 @@
                 <div class="nav_i">
                     <a href="./brand" class="nav_title nav_link <%= current.source === 'brand' ? '__active' :'' %>">Бренд</a>
                 </div>
-                <div class="nav_i js-nav-dropdown">
+                <div class="nav_i __with-dropdown js-nav-dropdown">
                     <a href="./collections" class="nav_title nav_link <%= current.source === 'collections' ? '__active' :'' %>">Коллекции</a>
 
                     <div class="nav_dropdown">
@@ -70,12 +75,22 @@
                 </div>
             </div>
             <div class="nav_search">
-                <div class="nav_title nav_link">Поиск</div>
+                <div class="nav_title nav_link js-search-open">Поиск</div>
+                <div class="nav_search-form">
+                    <form>
+                        <input class="nav_search-input" type="search" name="search" />
+                    </form>
+                    <div class="nav_search-form-close js-search-close"></div>
+                </div>
             </div>
+
+            <!--
+
             <div class="nav_aside">
                 <div class="nav_aside_i nav_link">Вход / Регистрация</div>
                 <div class="nav_aside_i nav_link">Корзина</div>
             </div>
+            -->
 
         </div>
     </nav>
