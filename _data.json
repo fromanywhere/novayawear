@@ -295,5 +295,9 @@
   },
   "collections-loader": {
     "layout": "_empty-layout"
+  },
+
+  "pages": {
+    "layout": "_auth-page-layout"
   }
 }
