@@ -26,7 +26,7 @@ define([
             document.body.removeChild(div);
 
             const scrollStyle = document.createElement('style');
-            scrollStyle.innerHTML = `body.lg-on, body.lg-on .scroll-padding { padding-right: ${scrollWidth}px } `;
+            scrollStyle.innerHTML = `html.has-lightbox, html.has-lightbox .scroll-padding { padding-right: ${scrollWidth}px } `;
             document.body.appendChild(scrollStyle);
         }
 
@@ -62,7 +62,7 @@ define([
             this.element.classList.toggle('__open');
             this.closeMenuWrapper();
             this.hideAll();
-            document.body.classList.toggle('lg-on', this.element.classList.contains('__open'));
+            document.documentElement.classList.toggle('has-lightbox', this.element.classList.contains('__open'));
         }
 
         closeMenuWrapper() {

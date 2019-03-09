@@ -12,18 +12,15 @@
         z-index: 100;
         width: 100%;
         visibility: hidden;
-        }
+        box-sizing: border-box;
+        height: 100%;
 
-
-        .top-menu_cnt {
-            box-sizing: border-box;
-            height: 100%;
-
-            &.__open {
-                width: 100%;
-                overflow: auto;
-                }
+        &.__open {
+            width: 100%;
+            overflow: auto;
+            visibility: visible;
             }
+        }
 
         .top-menu_overlay {
             position: fixed;
@@ -150,6 +147,7 @@
     position: relative;
     transition: transform 0.6s;
     margin-right: 0;
+    padding-bottom: 20px;
 
     &.__open {
         transform: translateX(-100%);
