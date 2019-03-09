@@ -93,7 +93,6 @@
         right: 0;
         height: 60px;
         display: flex;
-        border-right: 2rem #fff solid;
         align-items: center;
         justify-content: space-between;
         background-color: #fff;
@@ -287,3 +286,16 @@
     .nav_search.__open + .nav_auth {
         display: none;
         }
+
+.nav_cart {
+
+    & .nav_link {
+        height: 60px;
+        line-height: 60px;
+        margin-right: 15px;
+        }
+
+    &:hover .cart-popup {
+        display: block;
+        }
+    }
