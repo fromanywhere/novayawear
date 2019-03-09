@@ -285,5 +285,15 @@
   },
   "cart": {
     "layout": "_back-page-layout"
+  },
+
+  "catalog-loader": {
+    "layout": "_empty-layout"
+  },
+  "collection-loader": {
+    "layout": "_empty-layout"
+  },
+  "collections-loader": {
+    "layout": "_empty-layout"
   }
 }

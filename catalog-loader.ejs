@@ -1,0 +1,5 @@
+<% for(var i = 0; i < public._data['catalog'].items.length; i++) { %>
+    <div class="catalog_item">
+        <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
+    </div>
+<% } %>

@@ -733,6 +733,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     "./Gallery.js": 4,
     "./Grid.js": 5,
     "./ImageAlign.js": 6,
+    "./Loader.js": 12,
     "./MouseTitle.js": 7,
     "./ScrollTo.js": 9,
     "./Tabs.js": 10,
@@ -1123,6 +1124,61 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }]);
 
         return _class9;
+      }(e)
+    );
+  }.apply(t, i)) || (e.exports = l);
+}, function (e, t, s) {
+  var i, l;
+  i = [s(0), s(8)], void 0 === (l = function (e, t) {
+    var s = 2;
+    return (
+      /*#__PURE__*/
+      function (_e7) {
+        _inherits(_class10, _e7);
+
+        function _class10() {
+          _classCallCheck(this, _class10);
+
+          return _possibleConstructorReturn(this, _getPrototypeOf(_class10).apply(this, arguments));
+        }
+
+        _createClass(_class10, [{
+          key: "createStub",
+          value: function createStub() {
+            var e = document.createElement("div");
+            return e.className = "loader", e.innerHTML = '<i class="dot"></i><i class="dot"></i><i class="dot"></i>', e;
+          }
+        }, {
+          key: "setStub",
+          value: function setStub() {
+            this.loading ? this.element.appendChild(this.stub) : this.element.removeChild(this.stub);
+          }
+        }, {
+          key: "request",
+          value: function request() {
+            var _this4 = this;
+
+            this.loading = !0, this.setStub();
+            var e = new XMLHttpRequest();
+            e.onload = function () {
+              _this4.element.insertAdjacentHTML("beforeend", e.responseText), _this4.loading = !1, _this4.setStub();
+            }, e.onerror = function () {
+              _this4.loading = !1, _this4.hasMore = !1, _this4.setStub();
+            }, e.open("GET", this.url), e.send();
+          }
+        }, {
+          key: "scrollHandler",
+          value: function scrollHandler() {
+            this.hasMore && !this.loading && this.element.getBoundingClientRect().bottom < window.innerHeight * s && this.request();
+          }
+        }, {
+          key: "activate",
+          value: function activate(e) {
+            this.element = e, this.hasMore = !0, this.loading = !1, this.url = e.getAttribute("data-url"), this.stub = this.createStub(), window.addEventListener("scroll", t.throttle(this.scrollHandler, 100, this));
+          }
+        }]);
+
+        return _class10;
       }(e)
     );
   }.apply(t, i)) || (e.exports = l);
