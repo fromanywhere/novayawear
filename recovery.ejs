@@ -16,7 +16,10 @@
 
             <div class="form_i">
                 <label class="label-block" for="email">E-mail</label>
-                <input type="email" id="email" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "email",
+                    type: "email"
+                }); %>
             </div>
 
             <div class="form_i">

@@ -11,22 +11,34 @@
         <form>
             <div class="form_i">
                 <label class="label-block" for="name">Имя</label>
-                <input type="text" id="name" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "name",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
-                <label class="label-block" for="lastname">Фамилия</label>
-                <input type="text" id="lastname" class="base-input" />
+                <label class="label-block" for="surname">Фамилия</label>
+                <%- partial("_partials/_base-input", {
+                    id: "surname",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="email">E-mail</label>
-                <input type="email" id="email" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "email",
+                    type: "email"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="password">Пароль</label>
-                <input type="password" id="password" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "password",
+                    type: "password"
+                }); %>
 
                 <div class="email-confirmation">
                     <input type="checkbox" checked="checked" id="email-confirmation" />

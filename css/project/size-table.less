@@ -1,0 +1,51 @@
+@import "../_utils.less";
+
+.size-table {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    }
+
+    .size-table_wide {
+        display: none;
+
+        .tablet-landscape-breakpoint({
+            display: block;
+            })
+        }
+
+    .size-table_narrow {
+
+        .tablet-landscape-breakpoint({
+            display: none;
+            })
+        }
+
+        .size-table_item {
+            display: flex;
+
+            & + & {
+                border-top: 1px #000 solid;
+                margin-top: 9px;
+                padding-top: 10px;
+                }
+            }
+
+            .size-table_main {
+                .column();
+                border-left: 0 none;
+                border-right-width: 20px;
+                }
+
+            .size-table_secondary {
+                .column();
+                border-right: 0 none;
+                border-left-width: 20px;
+                }
+
+            .size-table_group {
+
+                & + & {
+                    margin-top: 10px;
+                    }
+                }

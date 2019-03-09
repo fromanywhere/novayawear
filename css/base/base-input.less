@@ -1,3 +1,7 @@
+.base-input_w {
+    position: relative;
+    }
+
 .base-input {
     display: block;
     box-sizing: border-box;
@@ -16,5 +20,20 @@
         transition: border-color 0.3s;
         border-color: #000;
         outline: none;
+        }
+
+    &.__invalid {
+        border-color: #f00;
+        }
+    }
+
+.base-input-error {
+    display: none;
+    color: #f00;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .base-input.__invalid + & {
+        display: block;
         }
     }

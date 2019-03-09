@@ -6,22 +6,34 @@
         <form>
             <div class="form_i">
                 <label class="label-block" for="name">Имя</label>
-                <input type="text" id="name" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "name",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="surname">Фамилия</label>
-                <input type="text" id="surname" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "surname",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="email">Email</label>
-                <input type="email" id="email" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "email",
+                    type: "email"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="phone">Телефон</label>
-                <input type="tel" id="phone" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "phone",
+                    type: "tel"
+                }); %>
             </div>
 
             <div class="form_i">
@@ -35,22 +47,34 @@
 
             <div class="form_i">
                 <label class="label-block" for="post">Почтовый индекс</label>
-                <input type="number" id="post" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "post",
+                    type: "number"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="area">Область/регион</label>
-                <input type="text" id="area" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "area",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="city">Населенный пункт</label>
-                <input type="text" id="city" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "city",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">
                 <label class="label-block" for="address">Адрес: улица, дом, квартира, корпус</label>
-                <input type="text" id="address" class="base-input" />
+                <%- partial("_partials/_base-input", {
+                    id: "address",
+                    type: "text"
+                }); %>
             </div>
 
             <div class="form_i">

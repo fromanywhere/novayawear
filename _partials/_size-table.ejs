@@ -1,0 +1,48 @@
+<div class="size-table">
+    <div class="size-table_wide text">
+        <table>
+            <thead>
+                <tr>
+                    <% for(var h = 0; h < public._data.item.table.wide.head.length; h++) { %>
+                        <th>
+                            <%- public._data.item.table.wide.head[h] %>
+                        </th>
+                    <% } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var wi = 0; wi < public._data.item.table.wide.body.length; wi++) { %>
+                    <tr>
+                        <% for(var wj = 0; wj < public._data.item.table.wide.body[wi].length; wj++) { %>
+                            <td>
+                                <%- public._data.item.table.wide.body[wi][wj] %>
+                            </td>
+                        <% } %>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <div class="size-table_narrow">
+        <% for(var ni = 0; ni < public._data.item.table.narrow.items.length; ni++) { %>
+            <div class="size-table_item">
+                <div class="size-table_main">
+                    <% for(var nm = 0; nm < public._data.item.table.narrow.items[ni].secondary.length; nm++) { %>
+                        <div class="size-table_group">
+                            <div><%- public._data.item.table.narrow.items[ni].main[nm].title %></div>
+                            <div><%- public._data.item.table.narrow.items[ni].main[nm].value %></div>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="size-table_secondary">
+                    <% for(var ns = 0; ns < public._data.item.table.narrow.items[ni].secondary.length; ns++) { %>
+                        <div class="size-table_group">
+                            <div><%- public._data.item.table.narrow.items[ni].secondary[ns].title %></div>
+                            <div><%- public._data.item.table.narrow.items[ni].secondary[ns].value %></div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

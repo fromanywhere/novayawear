@@ -3,10 +3,45 @@
         <div class="item_info">
             <div class="item_info-title">КОМБИНЕЗОН С ДЛИННЫМ РУКАВОМ CRANBERRY</div>
             <div class="item_info-text">Брючный костюм из эластичного денима. Блейзер имеет расширенную линией плеч и повторяет крой мужского пиджака. Застегивается на пуговицы, обработан на частичной подкладке. Прямые брюки имеют шлевки для пояса, два боковых кармана и один задний.</div>
-            <div class="item_info-links">
-                <a class="item_info-link" href="./brand">Дополнительная информация</a>
-                <a class="item_info-link" href="./isosoft">Таблица размеров</a>
-                <a class="item_info-link" href="./delivery">Доставка и оплата</a>
+
+            <div class="item_info-tabs js-hook" data-module="Tabs">
+                <div class="item_info-tabs-head">
+                    <span class="item_info-link js-link">Дополнительная информация</span>
+                    <span class="item_info-link js-link">Таблица размеров</span>
+                    <span class="item_info-link js-link">Доставка и оплата</span>
+                </div>
+                <div class="item_info-tabs-body">
+                    <div class="item_info-tab js-tab">
+                        Утепленный анорак унисекс. Воротник-стойка с кулиской. Объемный карман спереди. Рукава заканчиваются регулируемыми манжетами на кнопках. Изделие застегивается на молнию.
+                    </div>
+                    <div class="item_info-tab js-tab">
+                        <%- partial("_partials/_size-table"); %>
+                        <p>
+                            Остались вопросы?   +7 911 956 78 08    <a href="mailto:mail@novayawear.com">mail@novayawear.com</a>
+                        </p>
+                    </div>
+                    <div class="item_info-tab js-tab">
+                        <h1>ДОСТАВКА</h1>
+                        <p>
+                        — самовывоз из студии<br />
+                        — курьерская доставка по Санкт–Петербургу   350Р<br />
+                        — курьерская доставка в Москву   500р<br />
+                        — курьерская доставка регионы России: от 500р<br />
+                        </p>
+
+                        <h1>ОПЛАТА</h1>
+                        <p>
+                        — онлайн через платежную систему Payanyway<br />
+                        — наличными/картой курьеру при получении.<br />
+                        Возможна примерка и частичный выкуп.
+                        </p>
+
+                        <h1>ВОЗВРАТ</h1>
+                        <p>
+                        Вы можете вернуть не подошедший вам товар, а мы вернем вам его стоимость после получения изделия.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="item_options">
@@ -43,6 +78,7 @@
                 </div>
                 <div class="item_buy">
                     <button type="submit" class="item_buy-submit">Добавить в корзину</button>
+                    <a style="display: none" class="item_buy-submit" href="./cart">Перейти в корзину [1]</a>
                 </div>
             </form>
         </div>

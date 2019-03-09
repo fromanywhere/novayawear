@@ -34,4 +34,33 @@
             display: inline;
             }
         }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+
+    th {
+        font-weight: 400;
+        text-align: left;
+        border: 0 none;
+        border-left: 20px transparent solid;
+        padding: 10px 0;
+        vertical-align: bottom;
+
+        &:first-child {
+            border-left: 0 none;
+            }
+        }
+
+    td {
+        border: 0 none;
+        border-top: 1px #000 solid;
+        border-left: 20px transparent solid;
+        padding: 9px 0 10px;
+
+        &:first-child {
+            border-left: 0 none;
+            }
+        }
     }

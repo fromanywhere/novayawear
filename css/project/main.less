@@ -27,13 +27,15 @@
             }
 
     .main_gender-choice {
-        padding-top: 40px;
+        margin-top: 40px;
         display: flex;
         }
 
         .main_gender-choice-card {
             .column(1);
             position: relative;
+            transition: transform 0.3s;
+            transform: scale(0.97);
 
             .tablet-portrait-breakpoint({
                 .column(2, @tabletPortraitBreakpoint);
@@ -42,6 +44,23 @@
             .tablet-landscape-breakpoint({
                 .column(3, @tabletLandscapeBreakpoint);
                 });
+
+            &:first-child {
+                transform-origin: 0 0;
+                }
+
+            &:last-child {
+                transform-origin: 100% 0;
+                transform: scale(1.03);
+                }
+            
+            &:hover + & {
+                transform: scale(0.97);
+                }
+
+            &:hover {
+                transform: scale(1.03) !important;
+                }
             }
 
         .main_gender-choice-link {

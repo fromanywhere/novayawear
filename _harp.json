@@ -1,10 +1,13 @@
 {
   "globals": {
+    "id": "",
+    "name": "",
     "cssMod": "",
     "value": "",
     "type": "",
     "href": "",
     "title": "",
+    "error": "",
     "required": false,
     "oldprice": "",
     "sizes": ""
