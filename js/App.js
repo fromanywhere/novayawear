@@ -1063,7 +1063,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             var s = e.offsetWidth - e.clientWidth;
             document.body.removeChild(e);
             var i = document.createElement("style");
-            i.innerHTML = "body.lg-on { padding-right: ".concat(s, "px }"), document.body.appendChild(i);
+            i.innerHTML = "body.lg-on, body.lg-on .scroll-padding { padding-right: ".concat(s, "px } "), document.body.appendChild(i);
           }
         }, {
           key: "hideAll",
@@ -1082,7 +1082,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 break;
 
               case "click":
-                e.preventDefault(), this.menuWrapper.classList.add("__open"), e.currentTarget.classList.add("__hover");
+                e.target.classList.contains("nav_title") && (e.preventDefault(), this.menuWrapper.classList.add("__open"), e.currentTarget.classList.add("__hover"));
                 break;
 
               case "mouseleave":

@@ -26,7 +26,7 @@ define([
             document.body.removeChild(div);
 
             const scrollStyle = document.createElement('style');
-            scrollStyle.innerHTML = `body.lg-on { padding-right: ${scrollWidth}px }`;
+            scrollStyle.innerHTML = `body.lg-on, body.lg-on .scroll-padding { padding-right: ${scrollWidth}px } `;
             document.body.appendChild(scrollStyle);
         }
 
@@ -45,9 +45,11 @@ define([
                     event.currentTarget.classList.add('__hover');
                     break;
                 case 'click':
-                    event.preventDefault();
-                    this.menuWrapper.classList.add('__open');
-                    event.currentTarget.classList.add('__hover');
+                    if (event.target.classList.contains('nav_title')) {
+                        event.preventDefault();
+                        this.menuWrapper.classList.add('__open');
+                        event.currentTarget.classList.add('__hover');
+                    }
                     break;
                 case 'mouseleave':
                     this.hideAll();

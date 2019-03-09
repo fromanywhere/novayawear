@@ -1,7 +1,13 @@
 <div class="top-menu">
+
     <nav class="top-menu_cnt js-hook" data-module="TopMenu">
         <div class="top-menu_overlay"></div>
-        <div class="nav_open-button"></div>
+
+        <div class="nav_bar scroll-padding">
+            <div class="nav_open-button"></div>
+
+            <div class="nav_cart nav_link">Корзина</div>
+        </div>
 
         <div class="nav_w">
             <div class="nav_menu">
@@ -43,6 +49,7 @@
                 <div class="nav_i __with-dropdown js-nav-dropdown">
                     <a href="./delivery" class="nav_title nav_link <%= current.source === 'delivery' ? '__active' :'' %>">Информация</a>
                     <div class="nav_dropdown">
+                        <a href="./delivery" class="nav_dropdown_i __dub nav_link <%= current.source === 'delivery' ? '__active' :'' %>">Информация</a>
                         <a href="./delivery" class="nav_dropdown_i nav_link <%= current.source === 'delivery' ? '__active' :'' %>">Доставка</a>
                         <a href="./payment" class="nav_dropdown_i nav_link <%= current.source === 'payment' ? '__active' :'' %>">Оплата</a>
                         <a href="./refund" class="nav_dropdown_i nav_link <%= current.source === 'refund' ? '__active' :'' %>">Возврат</a>
@@ -58,6 +65,7 @@
                     <a href="./collections" class="nav_title nav_link <%= current.source === 'collections' ? '__active' :'' %>">Коллекции</a>
 
                     <div class="nav_dropdown">
+                        <a href="./collections" class="nav_dropdown_i __dub nav_link <%= current.source === 'collections' ? '__active' :'' %>">Коллекции</a>
                         <a href="./collection" class="nav_dropdown_i nav_link <%= current.source === 'collection' ? '__active' :'' %>">Campaign SS18</a>
                         <a href="./collection" class="nav_dropdown_i nav_link">Lookbook SS/18</a>
                         <a href="./collection" class="nav_dropdown_i nav_link">Lookbook FW17/18</a>
@@ -74,23 +82,24 @@
                     <a href="./shops" class="nav_title nav_link <%= current.source === 'shops' ? '__active' :'' %>">Магазины</a>
                 </div>
             </div>
-            <div class="nav_search">
-                <div class="nav_title nav_link js-search-open">Поиск</div>
-                <div class="nav_search-form">
-                    <form>
-                        <input class="nav_search-input" type="search" name="search" />
-                    </form>
-                    <div class="nav_search-form-close js-search-close"></div>
+
+            <div class="nav_actions">
+                <div class="nav_search">
+                    <div class="nav_link js-search-open">Поиск</div>
+                    <div class="nav_search-form">
+                        <form>
+                            <input class="nav_search-input" type="search" name="search" />
+                        </form>
+                        <div class="nav_search-form-close js-search-close"></div>
+                    </div>
+                </div>
+
+                <div class="nav_auth">
+                    <a class="nav_link" href="./login">Вход</a>
+                    /
+                    <a class="nav_link" href="./registration">Регистрация</a>
                 </div>
             </div>
-
-            <!--
-
-            <div class="nav_aside">
-                <div class="nav_aside_i nav_link">Вход / Регистрация</div>
-                <div class="nav_aside_i nav_link">Корзина</div>
-            </div>
-            -->
 
         </div>
     </nav>
