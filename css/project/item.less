@@ -129,20 +129,17 @@
 
             .item_sizes {
                 font-size: 0;
-                margin-bottom: 10px;
 
                 .tablet-landscape-breakpoint({
-                    margin-bottom: 40px;
+                    margin-bottom: 30px;
                     })
                 }
 
                 .item_size-option {
                     display: inline-block;
                     vertical-align: top;
-
-                    & + & {
-                        margin-left: 10px;
-                        }
+                    margin-right: 10px;
+                    margin-bottom: 10px;
                     }
 
                     .item_size-option-radio {
@@ -161,6 +158,12 @@
                         border-radius: 50%;
                         box-sizing: border-box;
                         cursor: pointer;
+
+                        .tablet-portrait-breakpoint({
+                            width: 60px;
+                            height: 60px;
+                            font-size: 28px;
+                            });
 
                         .item_size-option-radio:disabled + & {
                             border-color: #a5a5a5;
