@@ -16,11 +16,16 @@
             display: block;
             height: 100vh;
             width: 100%;
-            margin-top: -70px;
-            padding-top: 70px;
+            margin-top: -@defaultNavHeight;
+            padding-top: @defaultNavHeight;
             box-sizing: border-box;
             object-fit: cover;
             object-position: 50% 0;
+
+            .large-navigation-breakpoint ({
+                margin-top: -@largeNavHeight;
+                padding-top: @largeNavHeight;
+                })
             }
 
         .main_lookbook-title {

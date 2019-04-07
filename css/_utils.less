@@ -1,5 +1,6 @@
 @animationTime: .3s;
-
+@defaultNavHeight: 70px;
+@largeNavHeight: 60px;
 
 .wordWrap(@force: false) {
     display: block;
@@ -77,6 +78,12 @@
 
 .tablet-landscape-breakpoint(@rules) {
     @media screen and (min-width: @tabletLandscapeBreakpoint) {
+        @rules();
+        }
+    }
+
+.large-navigation-breakpoint(@rules) {
+    @media screen and (min-width: 1000px) {
         @rules();
         }
     }

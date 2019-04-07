@@ -6,7 +6,7 @@
         <div class="nav_bar scroll-padding">
             <div class="nav_open-button"></div>
 
-            <div class="nav_cart">
+            <div class="nav_cart js-nav-dropdown">
                 <a href="./cart" class="nav_link">Корзина 3</a>
                 <%- partial("_cart-popup"); %>
             </div>
@@ -17,7 +17,7 @@
                 <div class="nav_back"></div>
 
                 <div class="nav_i">
-                    <div class="nav_title nav_link">New</div>
+                    <div class="nav_title nav_link <%= current.source === 'index' ? '__active' : '' %>">New</div>
                 </div>
                 <div class="nav_i __with-dropdown js-nav-dropdown">
                     <div class="nav_title nav_link">Women</div>
@@ -89,9 +89,10 @@
             <div class="nav_actions">
                 <div class="nav_search">
                     <div class="nav_link js-search-open">Поиск</div>
-                    <div class="nav_search-form">
-                        <form>
+                    <div class="nav_search-form-cnt">
+                        <form class="nav_search-form">
                             <input class="nav_search-input" type="search" name="search" />
+                            <button class="nav_search-submit" type="submit">Поиск по каталогу</button>
                         </form>
                         <div class="nav_search-form-close js-search-close"></div>
                     </div>
@@ -99,8 +100,14 @@
 
                 <div class="nav_auth">
                     <a class="nav_link" href="./login">Вход</a>
-                    /
-                    <a class="nav_link" href="./registration">Регистрация</a>
+                    <span class="nav_auth-reg">
+                        /
+                        <a class="nav_link" href="./registration">Регистрация</a>
+                    </span>
+                </div>
+
+                <div class="nav_fake">
+                    <span class="nav_link">Корзина 3</span>
                 </div>
             </div>
 

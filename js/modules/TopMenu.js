@@ -6,6 +6,7 @@ define([
 ) {
     const MENU_ITEM_CLASSNAME = 'js-nav-dropdown';
     const HOVER_CLASS = '__hover';
+    const WIDE_NAV_MQ = window.matchMedia('(min-width: 1000px)');
 
     /**
      * @class
@@ -41,28 +42,51 @@ define([
         handleEvent(event) {
             switch (event.type.toLowerCase()) {
                 case 'mouseenter':
-                    this.hideAll();
-                    event.currentTarget.classList.add('__hover');
+                    if (WIDE_NAV_MQ.matches) {
+                        this.hideAll();
+                        event.currentTarget.classList.add('__hover');
+                    }
                     break;
                 case 'click':
-                    if (event.target.classList.contains('nav_title')) {
+                    if (event.target.classList.contains('nav_title') && !WIDE_NAV_MQ.matches) {
                         event.preventDefault();
                         this.menuWrapper.classList.add('__open');
                         event.currentTarget.classList.add('__hover');
                     }
                     break;
                 case 'mouseleave':
-                    this.hideAll();
+                    if (WIDE_NAV_MQ.matches) {
+                        this.hideAll();
+                    }
+                    this.disableCartBlock();
 
                     break;
                 }
+        }
+
+        disableCartBlock() {
+            this.element.classList.remove('__block');
         }
 
         toggleMenu() {
             this.element.classList.toggle('__open');
             this.closeMenuWrapper();
             this.hideAll();
+            this.disableCartBlock();
             document.documentElement.classList.toggle('has-lightbox', this.element.classList.contains('__open'));
+        }
+
+        closeAll() {
+            if (!this.element.classList.contains('__open')) {
+                return;
+            }
+
+            this.element.classList.remove('__open');
+            this.closeMenuWrapper();
+            this.closeSearch();
+            this.hideAll();
+            this.disableCartBlock();
+            document.documentElement.classList.remove('has-lightbox');
         }
 
         closeMenuWrapper() {
@@ -77,6 +101,17 @@ define([
 
         closeSearch() {
             this.searchWrapper.classList.remove('__open');
+            this.element.classList.add('__block');
+        }
+
+        formKeyboardHandler(e) {
+            const code = e.code;
+
+            switch(code) {
+                case 'Escape':
+                    this.closeSearch();
+                    break;
+            }
         }
 
         activate(element) {
@@ -89,18 +124,21 @@ define([
 
             const menuItems = element.getElementsByClassName(MENU_ITEM_CLASSNAME);
             Array.from(menuItems).forEach((item) => {
-                // item.addEventListener('mouseenter', this);
+                item.addEventListener('mouseenter', this);
+                item.addEventListener('mouseleave', this);
                 item.addEventListener('click', this);
             });
 
-            // element.addEventListener('mouseleave', this);
+            window.addEventListener('resize', this.closeAll.bind(this));
 
             element.querySelector('.nav_open-button').addEventListener('click', this.toggleMenu.bind(this));
-            element.querySelector('.top-menu_overlay').addEventListener('click', this.toggleMenu.bind(this));
+            element.querySelector('.top-menu_overlay').addEventListener('click', this.closeAll.bind(this));
             element.querySelector('.nav_back').addEventListener('click', this.closeMenuWrapper.bind(this));
 
             element.querySelector('.js-search-open').addEventListener('click', this.openSearch.bind(this));
             element.querySelector('.js-search-close').addEventListener('click', this.closeSearch.bind(this));
+
+            this.searchInput.addEventListener('keyup', this.formKeyboardHandler.bind(this));
         }
     }
 
