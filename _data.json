@@ -47,6 +47,31 @@
     ]
   },
 
+  "main-catalog": {
+    "items": [
+      {
+        "href": "./item",
+        "image": "./img/index/1.jpg",
+        "title": "Shop men"
+      },
+      {
+        "href": "./item",
+        "image": "./img/index/2.jpg",
+        "title": "Shop women"
+      },
+      {
+        "href": "./item",
+        "image": "./img/index/3.jpg",
+        "title": "Accesories"
+      },
+      {
+        "href": "./item",
+        "image": "./img/index/4.jpg",
+        "title": "Novaya Artistic"
+      }
+    ]
+  },
+
   "collection": {
     "layout": "_page-layout"
   },

@@ -1,5 +1,5 @@
 @animationTime: .3s;
-@defaultNavHeight: 70px;
+@defaultNavHeight: 60px;
 @largeNavHeight: 60px;
 
 .wordWrap(@force: false) {
@@ -38,6 +38,11 @@
         }
     }
 
+.tile() {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
 .large-text() {
     position: relative;
     top: 5px;
@@ -50,6 +55,13 @@
     top: 4px;
     font-size: 16px;
     line-height: 20px;
+    }
+
+.smallest-text() {
+    position: relative;
+    top: 8px;
+    font-size: 12px;
+    line-height: 15px;
     }
 
 .nav-link() {
@@ -67,8 +79,10 @@
         }
     }
 
-@tabletPortraitBreakpoint: 600px;
-@tabletLandscapeBreakpoint: 800px;
+@tabletPortraitBreakpoint: 375px;
+@tabletLandscapeBreakpoint: 600px;
+@smallDesktopBreakpoint: 1000px;
+@largeDesktopBreakpoint: 1400px;
 
 .tablet-portrait-breakpoint(@rules) {
     @media screen and (min-width: @tabletPortraitBreakpoint) {
@@ -82,8 +96,14 @@
         }
     }
 
-.large-navigation-breakpoint(@rules) {
-    @media screen and (min-width: 1000px) {
+.small-desktop-breakpoint(@rules) {
+    @media screen and (min-width: @smallDesktopBreakpoint) {
+        @rules();
+        }
+    }
+
+.large-desktop-breakpoint(@rules) {
+    @media screen and (min-width: @largeDesktopBreakpoint) {
         @rules();
         }
     }
@@ -105,6 +125,23 @@
         }
     }
 
+.column2(@columnCount: 1) {
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    border-left: 1rem transparent solid;
+    border-right: 1rem transparent solid;
+    width: @columnCount * 16.66%;
+
+    & when (@columnCount = 3) {
+        width: 50%;
+        }
+
+    & when (@columnCount = 6) {
+        width: 100%;
+        }
+    }
+
 .column-rule(@rule, @columnCount: 1, @breakpoint: 0) {
     @{rule}: @columnCount * 50%;
 
@@ -115,7 +152,35 @@
     & when (@breakpoint = @tabletLandscapeBreakpoint) {
         @{rule}: @columnCount * 16.66%;
         }
-    } 
+    }
+
+.large-text2() {
+    .small-text();
+
+    .small-desktop-breakpoint ({
+        .large-text();
+        })
+    }
+
+.small-text2() {
+    .smallest-text();
+
+    .small-desktop-breakpoint ({
+        .small-text();
+        })
+    }
+
+.image-loaded() {
+    @supports (object-fit: cover) {
+        opacity: 0;
+        transition: opacity .3s;
+        object-fit: cover;
+
+        &.image-loaded {
+            opacity: 1;
+            }
+        }
+    }
 
 
 

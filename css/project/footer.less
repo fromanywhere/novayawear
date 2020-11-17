@@ -1,66 +1,46 @@
 @import "../_utils.less";
 
 footer {
-    position: relative;
-    top: 4px; /* font grid align */
-    display: flow-root;
-    overflow: hidden; // fallback
-    padding-bottom: 16px; /* 20 - 4 */
-    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-top: 140px;
 
-    .tablet-portrait-breakpoint({
-        padding-top: 180px;
+    .large-desktop-breakpoint({
+        display: flex;
         });
     }
 
-.footer_left {
-    .column(2);
-    float: left;
-    margin-top: 20px;
+.footer_main {
+    .column2(6);
 
-    .tablet-portrait-breakpoint({
-        .column(4, @tabletPortraitBreakpoint);
-        });
-
-    .tablet-landscape-breakpoint({
-        .column(4, @tabletLandscapeBreakpoint);
-        })
-    }
-
-.footer_right {
-    .column(2);
-    float: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 20px;
-
-    .tablet-portrait-breakpoint({
-        .column(4, @tabletPortraitBreakpoint);
-        align-items: initial;
-        });
-
-    .tablet-landscape-breakpoint({
-        .column(2, @tabletLandscapeBreakpoint);
+    .large-desktop-breakpoint({
+        .column2(5);
         });
     }
 
-.footer_socials {
+.footer_additional {
+    .column2(6);
+    margin-top: 30px;
 
+    .large-desktop-breakpoint({
+        .column2(1);
+        margin-top: 0;
+        text-align: right;
+        });
     }
 
 .footer_link {
     .nav-link();
+    .large-text();
     display: block;
-    margin-top: 5px;
+    width: max-content;
 
-    .tablet-portrait-breakpoint({
-        float: left;
-        margin-right: 17px;
+    .large-desktop-breakpoint({
+        .small-text();
+        display: inline-block;
         margin-top: 0;
 
-        .footer_top & {
-            margin-right: 0;
+        & + & {
+            margin-left: 15px;
             }
         });
     }

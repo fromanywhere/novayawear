@@ -19,11 +19,15 @@ define([
             this.tabs.forEach((tab) => {
                 tab.classList.remove('__active');
             });
+
+            this.body.innerHTML = '';
         }
 
         showTab(index) {
             this.links[index].classList.add('__active');
             this.tabs[index].classList.add('__active');
+            this.body.appendChild(this.tabs[index].cloneNode(true));
+            this.active = index;
         }
 
         handleEvent(e) {
@@ -31,7 +35,11 @@ define([
                 const index = this.links.indexOf(e.target);
                 if (index !== -1) {
                     this.hideAll();
-                    this.showTab(index);
+                    if (this.active !== index) {
+                        this.showTab(index);
+                    } else {
+                        this.active = -1;
+                    }
                 }
             }
         }
@@ -39,7 +47,8 @@ define([
         activate(element) {
             this.links = Array.from(element.getElementsByClassName('js-link'));
             this.tabs = Array.from(element.getElementsByClassName('js-tab'));
-            this.showTab(0);
+            this.body = element.querySelector('.item_info-tabs-body');
+            this.active = -1;
 
             element.addEventListener('click', this);
         }

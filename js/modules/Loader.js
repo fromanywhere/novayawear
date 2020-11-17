@@ -36,7 +36,19 @@ define([
 
             const xhr = new XMLHttpRequest();
             xhr.onload = () => {
-                this.element.insertAdjacentHTML('beforeend', xhr.responseText);
+                let tmpElement = document.createElement('div');
+                tmpElement.innerHTML = xhr.responseText;
+
+                const listItems = tmpElement.children;
+
+                [...listItems].forEach((item) => {
+                    this.element.appendChild(item);
+                    utils.activate(item);
+
+                });
+
+                tmpElement = null;
+
                 this.loading = false;
                 this.setStub();
             };

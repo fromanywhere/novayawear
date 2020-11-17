@@ -1,53 +1,79 @@
 <article class="item">
+    <div class="item_preview js-hook" data-module="ImageAlign">
+        <img class="item_preview-img" src="<%- public._data['catalog'].items[0].image %>" />
+    </div>
+
     <div class="item_header">
         <div class="item_info">
-            <div class="item_info-title">КОМБИНЕЗОН С ДЛИННЫМ РУКАВОМ CRANBERRY</div>
-            <div class="item_info-text">Брючный костюм из эластичного денима. Блейзер имеет расширенную линией плеч и повторяет крой мужского пиджака. Застегивается на пуговицы, обработан на частичной подкладке. Прямые брюки имеют шлевки для пояса, два боковых кармана и один задний.</div>
+            <div class="item_info-title">Uma red laque</div>
+            <div class="item_info-text">Зимняя куртка с капюшоном силуэта оверсайз. Спущенная линия плеч. Объемные рукава заканчиваются трикотажными манжетами. В рельефах обработаны горизонтальные карманы. Изделие застегивается на молнию и кнопки. Предусмотрен пояс. Цвет красный лаковый</div>
+
+            <div class="item_info-previews">
+                <% for(var i = 0; i < 3; i++) { %>
+                    <div class="item_info-previews-item">
+                        <img class="item_info-previews-img" src="<%- public._data['catalog'].items[i].image %>" />
+                    </div>
+                <% } %>
+            </div>
 
             <div class="item_info-tabs js-hook" data-module="Tabs">
                 <div class="item_info-tabs-head">
-                    <span class="item_info-link js-link">Дополнительная информация</span>
-                    <span class="item_info-link js-link">Таблица размеров</span>
-                    <span class="item_info-link js-link">Доставка и оплата</span>
-                </div>
-                <div class="item_info-tabs-body">
-                    <div class="item_info-tab js-tab">
-                        Утепленный анорак унисекс. Воротник-стойка с кулиской. Объемный карман спереди. Рукава заканчиваются регулируемыми манжетами на кнопках. Изделие застегивается на молнию.
+                    <div class="item_info-tab-item">
+                        <span class="item_info-link js-link">Состав и уход</span>
+                        <div class="item_info-tab js-tab">
+                            Утепленный анорак унисекс. Воротник-стойка с кулиской. Объемный карман спереди. Рукава заканчиваются регулируемыми манжетами на кнопках. Изделие застегивается на молнию.
+                        </div>
                     </div>
-                    <div class="item_info-tab js-tab">
-                        <%- partial("_partials/_size-table"); %>
-                        <p>
-                            Остались вопросы?   +7 911 956 78 08    <a href="mailto:mail@novayawear.com">mail@novayawear.com</a>
-                        </p>
+                    <div class="item_info-tab-item">
+                        <span class="item_info-link js-link">Таблица размеров</span>
+                        <div class="item_info-tab js-tab">
+                            <%- partial("_partials/_size-table"); %>
+                            <p>
+                                Остались вопросы?   +7 911 956 78 08    <a href="mailto:mail@novayawear.com">mail@novayawear.com</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="item_info-tab js-tab">
-                        <h1>ДОСТАВКА</h1>
-                        <p>
-                        — самовывоз из студии<br />
-                        — курьерская доставка по Санкт–Петербургу   350Р<br />
-                        — курьерская доставка в Москву   500р<br />
-                        — курьерская доставка регионы России: от 500р<br />
-                        </p>
+                    <div class="item_info-tab-item">
+                        <span class="item_info-link js-link">Гид по посадке</span>
+                        <div class="item_info-tab js-tab">
+                            <p>
+                                Какой-то текст
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item_info-tab-item">
+                        <span class="item_info-link js-link">Доставка и оплата</span>
+                        <div class="item_info-tab js-tab">
+                            <h1>ДОСТАВКА</h1>
+                            <p>
+                                — самовывоз из студии<br />
+                                — курьерская доставка по Санкт–Петербургу   350Р<br />
+                                — курьерская доставка в Москву   500р<br />
+                                — курьерская доставка регионы России: от 500р<br />
+                            </p>
 
-                        <h1>ОПЛАТА</h1>
-                        <p>
-                        — онлайн через платежную систему Payanyway<br />
-                        — наличными/картой курьеру при получении.<br />
-                        Возможна примерка и частичный выкуп.
-                        </p>
+                            <h1>ОПЛАТА</h1>
+                            <p>
+                                — онлайн через платежную систему Payanyway<br />
+                                — наличными/картой курьеру при получении.<br />
+                                Возможна примерка и частичный выкуп.
+                            </p>
 
-                        <h1>ВОЗВРАТ</h1>
-                        <p>
-                        Вы можете вернуть не подошедший вам товар, а мы вернем вам его стоимость после получения изделия.
-                        </p>
+                            <h1>ВОЗВРАТ</h1>
+                            <p>
+                                Вы можете вернуть не подошедший вам товар, а мы вернем вам его стоимость после получения изделия.
+                            </p>
+                        </div>
                     </div>
+
                 </div>
+                <div class="item_info-tabs-body"></div>
             </div>
         </div>
         <div class="item_options">
             <form>
                 <div class="item_price">
-                    <span class="item_old-price">15 000 Руб</span>
+                    <span class="item_old-price">15 000</span>
                     <span class="item_original-price">10 900 Руб</span>
                 </div>
                 <div class="item_sizes">
@@ -97,13 +123,27 @@
     </div>
 
     <div class="item_similar">
-        <div class="item_similar-title">WE HAVE MORE ITEMS</div>
+        <div class="catalog-title">WE HAVE MORE ITEMS</div>
 
-        <% for(var i = 0; i < 3; i++) { %>
-            <div class="item_similar-item">
-                <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
-            </div>
-        <% } %>
+        <div class="catalog-list">
+            <% for(var i = 0; i < 3; i++) { %>
+                <div class="catalog-list_item">
+                    <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="item_watched">
+        <div class="catalog-title">You watched</div>
+
+        <div class="catalog-list">
+            <% for(var i = 0; i < 3; i++) { %>
+                <div class="catalog-list_item">
+                    <%- partial("_partials/_catalog-card", public._data['catalog'].items[i]); %>
+                </div>
+            <% } %>
+        </div>
     </div>
 
 </article>
